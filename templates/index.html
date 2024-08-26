@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-semibold mb-6">Enter Casting Parameters</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label for="file" class="block text-gray-700">Upload CSV File</label>
+                <input type="file" id="file" name="file" class="mt-2 border border-gray-300 rounded p-2 w-full">
+            </div>
+            <div class="grid grid-cols-1 gap-4">
+                <input type="text" name="casting_temperature" placeholder="Casting Temperature (680-750°C)" class="p-2 border border-gray-300 rounded">
+                <input type="text" name="cooling_temp" placeholder="Cooling Temperature (20-35°C)" class="p-2 border border-gray-300 rounded">
+                <input type="text" name="casting_speed" placeholder="Casting Speed (6-12 m/min)" class="p-2 border border-gray-300 rounded">
+                <input type="text" name="entry_temp" placeholder="Entry Temperature (400-500°C)" class="p-2 border border-gray-300 rounded">
+                <input type="text" name="emulsion_temp" placeholder="Emulsion Temperature (40-60°C)" class="p-2 border border-gray-300 rounded">
+                <input type="text" name="emulsion_pressure" placeholder="Emulsion Pressure (1-3 bar)" class="p-2 border border-gray-300 rounded">
+                <input type="text" name="emulsion_concentration" placeholder="Emulsion Concentration (2-5%)" class="p-2 border border-gray-300 rounded">
+                <input type="text" name="quench_pressure" placeholder="Quench Pressure (1-2 bar)" class="p-2 border border-gray-300 rounded">
+            </div>
+            <button type="submit" class="mt-6 bg-blue-500 text-white p-2 rounded">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
